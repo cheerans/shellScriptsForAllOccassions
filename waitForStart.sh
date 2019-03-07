@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cd /usr/bin/apache-tomcat-8.0.18/bin
+./startup.sh
+
 echo -n "Wait till tomcat is fully started ..."
 sleep 2
 while ! tail -15 /usr/bin/apache-tomcat-8.0.18/logs/catalina.out | grep "org.apache.catalina.startup.Catalina.start Server startup in" > /dev/null 2>&1; do
