@@ -5,7 +5,7 @@ searchFor2=$2
 
 if [ "$searchFor1" = "" ]
 then
-	echo "*** NO Params Provided *** Example Usage of command: ./kilProcess.sh MLService java 
+	echo "*** NO Params Provided *** Example Usage of command: ./kilProcess.sh MLService java"
 	exit 1
 fi
 KILLED_PROCESS=$(ps -ef | grep -v ksh | grep -v sh | grep $searchFor1 | grep $searchFor2 | awk '{ print $2 }')
