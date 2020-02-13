@@ -3,7 +3,7 @@
 display_usage() { 
 	echo "This script can be run to restart a service, by selecting an option" 
 	echo -e "\nUsage - Pass as argument Service Name option:\n.) asvc\n.) bsvc\n.) csvc\n.) dsvc\n" 
-	echo -e "\n\n if you pass an l, you can just list processes"
+	echo -e "\n if you pass an l, you can just list processes\n"
 } 
 
 
