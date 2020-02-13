@@ -8,7 +8,7 @@ then
 	echo "*** NO Params Provided *** Example Usage of command: ./kilProcess.sh MLService java"
 	exit 1
 fi
-KILLED_PROCESS=$(ps -ef | grep -v ksh | grep -v sh | grep $searchFor1 | grep $searchFor2 | awk '{ print $2 }')
+KILLED_PROCESS=$(ps auxww | grep -v ksh | grep -v sh | grep $searchFor1 | grep $searchFor2 | awk '{print $2}')
 echo "killing " $KILLED_PROCESS
 kill $KILLED_PROCESS
 echo -n "Wait till the process is done ..."
