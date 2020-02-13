@@ -29,7 +29,7 @@ killProcess() {
 listProcess() {
 
 	svcname=$1
-	LIST_PROCESS=$(ps auxww | grep -v ksh | grep -v sh | grep fact | grep java | grep $svcname| awk '{print $2}')
+	LIST_PROCESS=$(ps auxww | grep -v ksh | grep -v sh | grep "MAGICWORD" | grep java | grep $svcname| awk '{print $2}')
 	echo "\nProcesses are " $LIST_PROCESS "\n"
 	pidArr=(${LIST_PROCESS//b/ })
 	for pid in "${pidArr[@]}"
@@ -97,8 +97,3 @@ if [[ $option != "l" ]]
 then
 	restartService $servicename
 fi
-
-
-
-
-
