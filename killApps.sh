@@ -23,7 +23,7 @@ killProcess() {
 		echo -n "."
 	done
 	echo ""
-	echo "Killed the process for "$servicename
+	echo "Killed the process for "$svcname " services"
 }
 
 listProcess() {
@@ -55,22 +55,22 @@ restartService() {
 		asvc)
 			killProcess  $svcname
 			nohup  java -Xmx1024m -D$PROFILESTR -jar asvc.jar >  $BASELOGPATH/asvc.log 2>&1 &
-			echo "Restarted "$svcname
+			echo "Restarted "$svcname " services"
 			;;
 		bsvc)
 			killProcess  $svcname
 			nohup  java -Xmx1024m -D$PROFILESTR -jar bsvc.jar >  $BASELOGPATH/bsvc.log 2>&1 &
-			echo "Restarted "$svcname
+			echo "Restarted "$svcname " services"
 			;;
 		csvc)
 			killProcess  $svcname
 			nohup  java -Xmx1024m -D$PROFILESTR -jar csvc.jar >  $BASELOGPATH/csvc.log 2>&1 &
-			echo "Restarted "$svcname
+			echo "Restarted "$svcname " services"
 			;;
 		dsvc)
 			killProcess  $svcname
 			nohup  java -Xmx1024m -D$PROFILESTR -jar dsvc.jar >  $BASELOGPATH/dsvc.log 2>&1 &
-			echo "Restarted "$svcname
+			echo "Restarted "$svcname " services"
 			;;
 		*)
 			display_usage
