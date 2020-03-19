@@ -18,7 +18,8 @@ SEARCH_OPTS=$1
 		w)  SEARCH_PATTERN=$2;;
 	esac
 
-cd ../logs
+LOG_DIRECTORY=../logs
+cd $LOG_DIRECTORY
 FILE_PATTERN=*.log
 
 find . -name $FILE_PATTERN -exec grep -i $SEARCH_PATTERN {} \; -print
