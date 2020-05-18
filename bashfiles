@@ -1,0 +1,31 @@
+#bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+TMOUT=120000
+readonly TMOUT
+export TMOUT
+
+HOST=`uname -n`
+USERNAME=`whoami`
+export PS1='$USERNAME@$HOST:$PWD>'
+
+
+# .bashrc
+
+HOST=`uname -n`
+USERNAME=`whoami`
+PS1='$USERNAME@$HOST:$PWD>'
+
+# Add bash aliases.
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
+
+# .bash_aliases
+alias bin='cd /home/factrpt/apps/factDataService/bin'
+alias logs='cd /home/factrpt/apps/factDataService/logs'
+alias build='cd /home/factrpt/apps/factDataService/build'
