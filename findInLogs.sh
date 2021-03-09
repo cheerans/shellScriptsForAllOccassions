@@ -4,6 +4,7 @@ display_usage() {
 	echo "\n This script can be run to search log files, by selecting an option - for common search phrases" 
 	echo -e "\n Usage:- Pass as argument common search word option :\n\n\t.) Exception\n\t.) error\n\t.) shutdown\n\n\t    eg:) findInLogfiles 1" 
 	echo -e "\n If you pass a w, you can pass the search phrase itself!!! \n\n\t    eg:) findInLogfiles w SpecialWord"
+	echo -e "*** To grep for today findInLogfiles.sh 1 | grep \`date +\"%m-%d-%Y\"\`"
 }
 
 SEARCH_OPTS=$1
