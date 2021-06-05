@@ -1,0 +1,5 @@
+version=$(git describe --tags --match "some-api*" | cut -d"-"  -f7 | sed 's/-/\./g' | sed 's/.[^.]*//3g')
+some-project-api-microservice-tag-release-20210526.01
+extracts - 20210526.01
+   
+git tag | sort -V | tail -1 - sorts and gets the latest git tag
