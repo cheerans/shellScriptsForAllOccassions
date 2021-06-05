@@ -26,6 +26,6 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # .bash_aliases
-alias bin='cd /home/factrpt/apps/factDataService/bin'
-alias logs='cd /home/factrpt/apps/factDataService/logs'
-alias build='cd /home/factrpt/apps/factDataService/build'
+alias bin='cd /home/scheeran/apps/bin'
+alias logs='cd /home/scheeran/apps/logs'
+alias build='cd /home/scheeran/apps/build'
